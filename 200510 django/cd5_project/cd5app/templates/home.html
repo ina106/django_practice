@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인아의 장고</title>
+    <link rel="stylesheet" href="{% static 'homedeco.css' %}">
+
+</head>
+<body>
+    
+<div class="title">
+    <h1>인아의 유튜브 취향 대★공★개</h1>
+</div>
+
+{% for i in key.all %}
+<div class="container">
+    <span class="channel"><b>{{i.channel}}</b></span>
+    <span class="name">&#40;{{i.name}}&#41;</span>
+    <span class="prefer">{{i.prefer}}</span>
+    <span class="live">{{i.live}}</span>
+    <span class="follower">{{i.follower}}</span>
+    <p>
+        <iframe width="340px" height="210px" src="{{i.link1}}"></iframe>
+        <iframe width="340px" height="210px" src="{{i.link2}}"></iframe>
+        <iframe width="340px" height="210px" src="{{i.link3}}"></iframe>
+    </p>
+</div>
+
+{% endfor %}
+</body>
+</html>
