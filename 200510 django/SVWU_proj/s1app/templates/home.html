@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리나갤</title>
+    <link rel="stylesheet" href="{% static 'deco.css' %}">
+</head>
+<body>
+    <div class="title">
+        <h1>루리나의 갤러리</h1>
+    </div>
+
+{% for i in key.all %}
+<div class="container">
+    <div class="category">{{i.category}}
+        <div class="img">
+            
+        </div>
+        <div class="title">{{i.title}}</div>
+    </div>
+    
+</div>
+{% endfor %}
+</body>
+</html>
