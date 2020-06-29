@@ -18,6 +18,6 @@ from django.db import models
 
 class Gall(models.Model):
     objects = models.Manager()
-    category = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
+    image = models.ImageField(blank=True, upload_to="image", null=True)
         

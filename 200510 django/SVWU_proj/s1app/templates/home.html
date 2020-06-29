@@ -12,15 +12,12 @@
         <h1>루리나의 갤러리</h1>
     </div>
 
-{% for i in key.all %}
+{% for i in home_key.all %}
 <div class="container">
-    <div class="category">{{i.category}}
-        <div class="img">
-            
-        </div>
+    <div class="image">
+        <img src="{{i.image.url}}" width="300px">
         <div class="title">{{i.title}}</div>
     </div>
-    
 </div>
 {% endfor %}
 </body>
