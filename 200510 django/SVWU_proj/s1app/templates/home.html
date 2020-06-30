@@ -11,13 +11,16 @@
     <div class="title">
         <h1>루리나의 갤러리</h1>
     </div>
-<div class="container">
-{% for i in home_key.all %}
-    <div class="image">
-        <img src="{{i.image.url}}" width="300px">
-        <div class="title">{{i.title}}</div>
+{% block contents %}
+    {% for i in home_key.all %}
+    <div class="container">
+        <div class="image" style="background-color: pink;">
+            <img src="{{i.image.url}}" width="300px">
+            <div class="title">{{i.title}}</div>
+        </div>
     </div>
-{% endfor %}
-</div>
+    {% endfor %}
+{% endblock contents %}
+
 </body>
 </html>
