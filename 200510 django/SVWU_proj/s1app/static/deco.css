@@ -6,14 +6,23 @@ html, body{
 }
 
 .container{
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 300px;
-
+    background-color: orangered;
 }
 
 .image{
-    width: 30%;
-    height: 30%;
+    position: relative;
+    widows: 300px;
     margin: 3px;
+    background-color: blue;
+}
+
+.title{
+    position: relative;
+    background-color: blueviolet;
+    width: 300px;
+    
 }

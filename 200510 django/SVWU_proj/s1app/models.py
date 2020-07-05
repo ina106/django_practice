@@ -20,4 +20,5 @@ class Gall(models.Model):
     objects = models.Manager()
     title = models.CharField(max_length=50)
     image = models.ImageField(blank=True, upload_to="image", null=True)
-        
+    date = models.CharField(max_length=10)
+    summ = models.CharField(max_length=100)
