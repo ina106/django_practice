@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="{% static 'deco.css' %}">
 </head>
 <body>
+    {% block title %}
     <div class="Title">
-        <h1>루리나의 갤러리</h1>
+        <h1>🍀루리나의 갤러리🍀</h1>
     </div>
+    {% endblock title %}
     <div class="base">
 {% block contents %}
+    <a href="{% url 'create' %}">추가</a>
     {% for i in home_key.all %}
     <div class="container">
-    
         <img src="{{i.image.url}}" width="380px">
-        <div class="title">{{i.title}}</div>
-    
+        <div class="title">{{i.title}}</div>  
     </div>
     {% endfor %}
 {% endblock contents %}
