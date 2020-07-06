@@ -1,28 +1,42 @@
+@font-face{
+    font-family: 'Noto Sans KR';
+    src: url(Noto Sans KR.oft) format('truetype');
+}
+
 html, body{
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Noto Sans KR;
+    position: relative;
+    background-color: rgb(235, 231, 210);
+}
+
+.Title{
+    height: 100px;
+    align-content: center;
+    text-align: center;
+    color: saddlebrown;
+}
+
+.base{
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 .container{
     position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    background-color: orangered;
-}
-
-.image{
-    position: relative;
-    widows: 300px;
-    margin: 3px;
-    background-color: blue;
+    left: 50px;
+    height: 10%;
+    margin: 10px;
+    padding: 20px;
+    
 }
 
 .title{
     position: relative;
-    background-color: blueviolet;
-    width: 300px;
+    text-align: center;
     
 }
