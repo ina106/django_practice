@@ -21,10 +21,16 @@ html, body{
     color: saddlebrown;
 }
 
+.title{
+    position: relative;
+    text-align: center;
+}
+    
 .base{
     display: flex;
     flex-direction: row;
     position: relative;
+
 }
 
 .container{
@@ -36,8 +42,32 @@ html, body{
     
 }
 
-.title{
-    position: relative;
-    text-align: center;
-    
+.container:hover:not(.active){
+    background-color: #4CAF50;
+    color: white;
 }
+
+.info{
+    cursor: default;
+}
+
+.info:before{
+    font-weight: bold;
+}
+
+
+@-webkit-keyframes fadeIn {
+	0% { 
+		opacity:0; 
+		transform: scale(0.6);
+	}
+	100% {
+		opacity:100%;
+		transform: scale(1);
+	}
+}
+ 
+@keyframes fadeIn {
+	0% { opacity:0; }
+	100% { opacity:100%; }
+}​ 
