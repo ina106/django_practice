@@ -24,18 +24,18 @@ def create(request):
         pass
     return render(request,'create.html')
 
-def edit(request,change_id):
+def change(request,change_id):
     change_obj = get_object_or_404(Gall,pk=change_id)
     if request.method == "POST":
         change_obj.title = request.POST['titleImg']
-        change_obj.img = request.FILES['fileImg']
+        change_obj.img = request.POST['fileImg']
         change_obj.date = request.POST['dateImg']
         change_obj.summ = request.POST['summImg']
         change_obj.save()
-        return redirect(reverse('detail', args=(change_id,)))
+        return redirect('home')
     else:
         pass
-    return render(request,'edit.html',{"edit_key":change_id})
+    return render(request,'change.html',{"change_key":change_obj})
 
 def delete(request,delete_id):
     delete_obj = get_object_or_404(Gall, pk = delete_id)

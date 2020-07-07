@@ -11,11 +11,15 @@
     {% block title %}
     <div class="Title">
         <h1>🍀루리나의 갤러리🍀</h1>
+        <p>진자 엄청 열심히 만들엇어요</p>
     </div>
     {% endblock title %}
+    <div class="create">
+        <a href="{% url 'create' %}" style="color: rgb(235, 231, 210); background-color: saddlebrown;">추가하기</a>
+    </div>
     <div class="base">
 {% block contents %}
-    <a href="{% url 'create' %}">추가</a>
+    
     {% for i in home_key.all %}
     <div class="container">
         <img src="{{i.image.url}}" width="380px">
@@ -23,11 +27,12 @@
         <div style="color:  rgb(235, 231, 210);" class="info">
             <p>{{i.summ}}</p>
             <p>{{i.date}}</p> 
-            <p>
-            </p>
+            {{home_key.id}}
+        <a href="{% url 'change' i.id %}" style="color: rgb(235, 231, 210);">수정하기</a><br>
+        <a href="{% url 'delete' i.id %}" style="color: rgb(235, 231, 210);">삭제하기</a><br>
         </div>
+        
     </div>
-   
     {% endfor %}
 {% endblock contents %}
     </div>

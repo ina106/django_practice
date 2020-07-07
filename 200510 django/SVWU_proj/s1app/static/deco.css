@@ -33,6 +33,10 @@ html, body{
 
 }
 
+.create{
+    margin-left: 70px;
+}
+
 .container{
     position: relative;
     left: 50px;
@@ -43,12 +47,13 @@ html, body{
 }
 
 .container:hover:not(.active){
-    background-color: #4CAF50;
+    background-color: saddlebrown;
     color: white;
 }
 
 .info{
     cursor: default;
+    text-align: center;
 }
 
 .info:before{

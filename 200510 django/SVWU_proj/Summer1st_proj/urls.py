@@ -22,5 +22,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',s1app.views.home,name='home'),
+    path('detail/<int:detail_id>',s1app.views.detail, name="detail"),
     path('create/',s1app.views.create,name="create"),
+    path('change/<int:change_id>',s1app.views.change, name="change"),
+    path('delete/<int:delete_id>',s1app.views.delete, name="delete"),
 ] +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
